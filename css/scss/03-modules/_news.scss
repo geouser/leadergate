@@ -7,10 +7,12 @@
 }
 
 .newsList {
-    @include flex($alignI: flex-start);
+    @include flex($alignI: flex-start, $justify: flex-start);
 }
 .newsItem {
     width: 32%;
+    margin-left: 0.666%;
+    margin-right: 0.6666%;
     color: $text;
     position: relative;
     background-color: #FFF;
@@ -75,4 +77,78 @@
 }
 .newsItem:hover:after {
     bottom: -20px;
+}
+
+
+.wp-pagenavi {
+    display: block;
+    margin: 50px auto 0 auto;
+    width: auto;
+
+    a,
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 21px;
+        color: $text;
+        font-family: $um;
+        margin: 0 10px;
+        -webkit-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+    }
+
+    a.page:hover,
+    span.current {
+        color: #007AE4;
+    }
+
+    a.first,
+    a.last {
+        width: 10px;
+        height: 25px;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    a.first:before {
+        border-style: solid;
+        border-width: 5px 5px 5px 0;
+        border-color: transparent $text transparent transparent;
+    }
+    a.last:before {
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent $text;
+    }
+}
+
+
+.news {
+    .newsItem {
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+        margin-bottom: 50px;
+
+        &:after {
+            display: none;
+        }
+
+        &:hover {
+            p {
+                color: #007AE4;
+            }
+        }
+    }
 }
