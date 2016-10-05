@@ -1,6 +1,17 @@
 
 // TYPOGRAPHIC
 // ---------------------------
+h1 {
+    font: 84px $ub;
+    color: #FFF;
+    display: block;
+    text-transform: uppercase;
+}
+.offer .subtitle {
+    font: 21px $um;
+    color: #FFF;
+    text-transform: uppercase;
+}
 html,
 body {
 	height: 100%;
