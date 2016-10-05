@@ -1,6 +1,13 @@
 .footer {
     background-color: $text;
+
+    &--light {
+        .footer-top {
+            background-color: #fff;
+        }
+    }
 }
+
 
 
 .footer-text {
@@ -12,6 +19,12 @@
     font-size: 16px;
 }
 
+.footer--light {
+    .footer-text {
+        color: $text;
+        border-right-color: #D3D2D5;
+    }
+}
 
 .footer-menu {
     width: -webkit-calc(100% - 270px);
@@ -46,6 +59,14 @@
             font-size: 16px;
             font-family: $um;
             text-transform: uppercase;
+        }
+    }
+}
+
+.footer--light {
+    .footer-menu {
+        .menu-item a {
+            color: $text;
         }
     }
 }
