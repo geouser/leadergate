@@ -1,0 +1,45 @@
+.servicesList {
+    @include flex($alignI: flex-start);
+}
+
+.service {
+    width: 33%;
+    padding: 0 50px;
+    margin: 0 0 45px;
+    color: $text;
+    &__img {
+        width: 180px;
+        height: 180px;
+        border: 8px solid #fff;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 2px #cdccd0;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        img {
+            max-width: 100%;
+            display: block;
+            min-width: 100%;
+            -webkit-transition: all .2s;
+               -moz-transition: all .2s;
+                -ms-transition: all .2s;
+                 -o-transition: all .2s;
+                    transition: all .2s;
+        }
+        margin: 0 auto 20px;
+    }
+    span {
+        font: 16px $um;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+        color: $text;
+    }
+    &:hover {
+        img {
+            opacity: .8;
+        }   
+    }
+}
