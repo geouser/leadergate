@@ -73,12 +73,20 @@ section.tabs {
     h4,
     h5,
     h6,
-    p {
+    p,
+    img {
         &:not(:first-child) {
             margin-top: 20px;
         }
 
         font-weight: normal;
+    }
+
+    img {
+        display: block;
+        float: none!important;
+        width: 100%!important;
+        height: auto!important;
     }
 
     ul {
