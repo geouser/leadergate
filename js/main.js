@@ -12,6 +12,11 @@ jQuery(document).ready(function($) {
         $('.languages__op').toggleClass('active');
     });
 
+    $('.expand button').click(function(){
+        $(this).toggleClass('active');
+        $(this).siblings('.expand__info').toggleClass('active');
+    });
+
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
@@ -65,6 +70,13 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.offer__slider').slick({
+        dots: true,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        pauseOnHover: false
+    });
 
     /*----------------------------
                               SEND FORM

@@ -45,6 +45,30 @@
     position: relative;
     &__current {
         cursor: pointer;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 0;
+            height: 0;
+            margin-left: 5px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #fff;
+        }
+        &.active {
+            &:after {
+                -webkit-transform: rotate(180deg);
+                   -moz-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                     -o-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                border-top: 4px solid $accent;
+            }
+        }
     }
     &__op {
         line-height: normal;
