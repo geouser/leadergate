@@ -26,7 +26,8 @@ jQuery(document).ready(function($) {
             $element2 = $('header'),
             className = 'hasScrolled';
 
-        $document.scroll(function() {
+        $document.on('ready scroll', function(event) {
+            event.preventDefault();
             $element.toggleClass(className, $document.scrollTop() >= 1);
             $element2.toggleClass(className, $document.scrollTop() >= 1);
         });
@@ -77,6 +78,14 @@ jQuery(document).ready(function($) {
         autoplay: true,
         pauseOnHover: false
     });
+
+
+    /*---------------------------
+                                  Tabs
+    ---------------------------*/
+    if ( $('.tabs').length > 0 ) {
+        $('.tabs').tabs();
+    }
 
     /*----------------------------
                               SEND FORM
