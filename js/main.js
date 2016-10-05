@@ -87,6 +87,16 @@ jQuery(document).ready(function($) {
         $('.tabs').tabs();
     }
 
+    /*---------------------------
+                                  Accordeon
+    ---------------------------*/
+    if ( $('#accordeon').length > 0 ) {
+        $('#accordeon').accordion({
+            collapsible: true,
+            heightStyle: "content"
+        });
+    }
+
     /*----------------------------
                               SEND FORM
     -------------------------*/

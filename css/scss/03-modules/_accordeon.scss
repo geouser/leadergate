@@ -1,0 +1,68 @@
+.accordeon {
+    &__title {
+        position: relative;
+        padding-left: 30px;
+        color: $text;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-family: $um;
+        text-align: left;
+        margin-bottom: 20px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+
+        &:before {
+            content:'';
+            width: 10px;
+            height: 10px;
+            background-color: $text;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        &.ui-state-hover {
+            color: #007AE4;
+            &:before {
+                background-color: #007AE4;
+            }
+        }
+
+        &.ui-state-active {
+            padding-left: 80px;
+            color: #007AE4;
+            margin-bottom: 20px;
+
+            &:before {
+                width: 55px;
+                height: 5px;
+                background-color: #007AE4;
+            }
+        }
+    }
+
+
+    &__content {
+        padding-left: 80px;
+        padding-bottom: 90px;
+
+        .article ul {
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 20px;
+            display: block;
+        }
+    }
+}
