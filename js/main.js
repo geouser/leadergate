@@ -20,18 +20,20 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
-    $(function() { 
-        var $document = $(document),
-            $element = $('.menu-button'),
-            $element2 = $('header'),
-            className = 'hasScrolled';
+    if($(window).width() > 960){
+         $(function() { 
+            var $document = $(document),
+                $element = $('.menu-button'),
+                $element2 = $('header'),
+                className = 'hasScrolled';
 
-        $document.on('ready scroll', function(event) {
-            event.preventDefault();
-            $element.toggleClass(className, $document.scrollTop() >= 1);
-            $element2.toggleClass(className, $document.scrollTop() >= 1);
+            $document.on('ready scroll', function(event) {
+                event.preventDefault();
+                $element.toggleClass(className, $document.scrollTop() >= 1);
+                $element2.toggleClass(className, $document.scrollTop() >= 1);
+            });
         });
-    });
+    }
       
 
     /*---------------------------

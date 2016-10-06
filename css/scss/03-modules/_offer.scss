@@ -8,15 +8,24 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    @include m700 {
+        height: auto;
+        min-height: 0;
+        max-height: 800px;
+        padding: 180px 0 160px;
+    }
     @include flex($direction: column, $justify: center);
     > * {
         position: relative;
         z-index: 2;
     }
     &--slider {
-        padding-top: 0;
+        padding: 0;
         .slick-slide {
             padding-top: 100px;
+            @include m700 {
+                padding: 180px 0 160px;
+            }
         }
     }
     &:after {
@@ -32,6 +41,9 @@
         display: block;
         color: #FFF;
         font-size: 18px;
+        @include m700 {
+            font-size: 16px;
+        }
     }
     .button {
         margin-top: 50px;
@@ -45,6 +57,10 @@
         margin: auto;
         width: 960px;
         @include flex();
+        @include m900 {
+            width: 100%;
+            padding: 0 20px;
+        }
     }
 }
 

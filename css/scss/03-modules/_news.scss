@@ -8,15 +8,22 @@
 
 .newsList {
     @include flex($alignI: flex-start, $justify: flex-start);
+     @include m960 {
+        -webkit-justify-content: center;
+                justify-content: center;
+    }
 }
 .newsItem {
-    width: 32%;
+    width: 307px;
     margin-left: 0.666%;
     margin-right: 0.6666%;
     color: $text;
     position: relative;
     background-color: #FFF;
     @include transition(all, .2s);
+    @include m960 {
+        margin: 0px 10px 20px;
+    }
     &__img {
         width: 100%;
         height: 200px;
