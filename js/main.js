@@ -111,6 +111,16 @@ jQuery(document).ready(function($) {
         });
     }
 
+
+    /*---------------------------
+                                  Custom input file
+    ---------------------------*/
+    $('#file').on('change', function(event) {
+        event.preventDefault();
+        var filename = $(this).val().split('/').pop().split('\\').pop();
+        $(this).siblings('label').text(filename);
+    });
+
     /*----------------------------
                               SEND FORM
     -------------------------*/

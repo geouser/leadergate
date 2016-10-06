@@ -1,0 +1,53 @@
+.popup {
+    display: block;
+    width: 620px;
+    padding: 40px 80px 50px 80px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+
+    &__title {
+        text-transform: uppercase;
+        color: $text;
+        font-size: 30px;
+        font-family: $um;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .form .button {
+        margin-top: 0;
+    }
+
+    .g-recaptcha {
+        width: 304px;
+        margin: 0 auto;
+    }
+
+    .form-button-group {
+        @include flex($justify: space-between);
+        margin-top: 40px;
+    }
+}
+
+.input-file {
+    width: 220px;
+
+    input[type=file]{
+        display: none;
+    }
+
+    label {
+        width: 100%;
+        padding: 16px 10px;
+        text-align: center;
+        background-color: $text;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: block;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
