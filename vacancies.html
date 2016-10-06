@@ -17,6 +17,7 @@
         <!--<link rel="shortcut icon" href="images/favicon.ico">-->
         
         <link rel="stylesheet" href="css/general.css">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
 
@@ -86,7 +87,7 @@
                                 <li>Temporibus autem quibusdam;</li>
                             </ul>
                             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga</p>
-                            <button class="button">Apply now</button>
+                            <button class="button magnific" href="#modal-popup">Apply now</button>
                         </article>
                     </div>
                     <!-- end vacancy -->
@@ -103,7 +104,7 @@
                                 <li>Temporibus autem quibusdam;</li>
                             </ul>
                             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga</p>
-                            <button class="button">Apply now</button>
+                            <button class="button magnific" href="#modal-popup">Apply now</button>
                         </article>
                     </div>
                     <!-- end vacancy -->
@@ -120,7 +121,7 @@
                                 <li>Temporibus autem quibusdam;</li>
                             </ul>
                             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga</p>
-                            <button class="button">Apply now</button>
+                            <button class="button magnific" href="#modal-popup">Apply now</button>
                         </article>
                     </div>
                     <!-- end vacancy -->
@@ -180,7 +181,33 @@
         </footer> <!-- end footer -->
 
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup">
+            <p class="popup__title">Lorem ipsum dolor</p>
+            <form action="" class="form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Enter your name..">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="mail" placeholder="Enter your email..">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Enter your phone..">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="company" placeholder="Enter your description..">
+                </div>
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6Lf7jggUAAAAALZ8AKyKXaRqoEUtvM2cysDQ7aNs"></div>
+                </div>
+                <div class="form-group form-button-group">
+                    <div class="input-file">
+                        <label for="file">Attach a cv</label>
+                        <input type="file" name="attach" id="file">
+                    </div>
+                    <button class="button">Send</button>
+                </div>
+            </form>
+        </div>
 
         <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
             <p class="heading">Ваша заявка принята =)</p>
