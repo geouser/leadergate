@@ -47,6 +47,10 @@ body {
 	width: 960px;
 	margin: 0 auto;
 	text-align: center;
+     @include m960 {
+        width: 100%;
+        padding: 0 10px;
+    }
 }
 .flex {
     @include flex();
