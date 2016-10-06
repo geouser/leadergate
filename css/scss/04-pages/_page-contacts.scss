@@ -49,10 +49,25 @@
     width: 640px;
     text-align: left;
     padding-right: 100px;
+
+    @media ($tablets) {
+        width: 100%;
+        margin-bottom: 50px;
+        padding-right: 0;
+    }
 }
 .contacts-form {
     width: -webkit-calc(100% - 640px);
     width: calc(100% - 640px);
+
+    @media ($tablets) {
+        width: 100%;
+
+        .form {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
 }
 
 .contacts-box {
@@ -79,6 +94,16 @@
             font-family: $ur;
             font-style: normal;
             color: $text;
+
+            @media (max-width: 600px) {
+                font-size: 20px;
+            }
+        }
+
+        @media ($phones) {
+            br {
+                display: none;
+            }
         }
     }
 }
@@ -134,6 +159,10 @@
     height: 460px;
     position: relative;
     padding: 0;
+
+    @media ($phones) {
+        height: 300px;
+    }
 
     &:before {
         content: '';

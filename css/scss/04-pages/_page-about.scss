@@ -7,6 +7,15 @@ section.tabs {
     border-bottom: 1px solid $text;
     margin-bottom: 100px;
 
+    @media ($phones) {
+        border-bottom: 0;
+        margin-bottom: 50px;
+    }
+
+    @media ($tablets) {
+        height: auto;
+    }
+
     &:hover {
         border-bottom-color: #007AE4;
 
@@ -17,6 +26,16 @@ section.tabs {
 
     .wrapper {
         height: 100%;
+
+        @media ($tablets) {
+            padding: 0;
+            height: auto;
+        }
+        @media ($phones) {
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
     }
 
     &__item {
@@ -27,8 +46,20 @@ section.tabs {
         list-style: none;
         transition: background-color 0.3s ease;
 
+        @media ($tablets) {
+            height: auto;
+        }
+
+        @media ($phones) {
+            width: 33.3333%;
+        }
+
         &:not(:last-child) {
             border-right: 1px solid $text;
+
+            @media ($phones) {
+                border-right: 0;
+            }
         }
 
         a {
@@ -43,6 +74,25 @@ section.tabs {
             -o-transition: color 0.3s ease;
             transition: color 0.3s ease;
 
+            @media ($tablets) {
+                font-size: 18px;
+                height: auto;
+                padding: 25px 5px;
+            }
+
+            @media ($phones) {
+                font-size: 18px;
+            }
+
+            @media (max-width: 650px) {
+                font-size: 14px;
+            }
+
+            @media (max-width: 560px) {
+                padding: 20px 5px;
+                font-size: 13px;
+            }
+
             span {
                 display: inline-block;
                 vertical-align: middle;
@@ -53,9 +103,16 @@ section.tabs {
         &.ui-state-active,
         &.ui-state-hover {
             background-color: #007AE4;
-
             a {
                 color: #fff;
+            }
+
+            @media ($phones) {
+                background-color: transparent;
+
+                a {
+                    color: #007AE4;
+                }
             }
         }
 
@@ -67,6 +124,10 @@ section.tabs {
     text-align: left;
     font-family: $ur;
     font-size: 18px;
+
+    @media ($phones) {
+        font-size: 16px;
+    }
     
     h1,
     h2,
@@ -182,6 +243,11 @@ section.tabs {
         p {
             text-align: center;
             width: 50%;
+
+            @media ($phones) {
+                width: 100%;
+                margin: 10px 0;
+            }
         }
 
         i {
@@ -196,6 +262,10 @@ section.tabs {
             font-family: $ur;
             display: inline-block;
             vertical-align: middle;
+
+            @media ($phones) {
+                font-size: 18px;
+            }
         }
     }
 }

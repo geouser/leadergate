@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
         if ($('header').hasClass('active')) {
                 $('body, html').css('overflow', 'hidden');
             } else {
-                $('body, html').css('overflow', 'visible');
+                $('body, html').css('overflow', 'auto');
             }
     });
 
@@ -87,12 +87,42 @@ jQuery(document).ready(function($) {
     });
 
 
+
+    /*---------------------------
+                                  Offer slider
+    ---------------------------*/
     $('.offer__slider').slick({
         dots: true,
         arrows: false,
         fade: true,
         autoplay: true,
         pauseOnHover: false
+    });
+
+    /*---------------------------
+                                  news slider
+    ---------------------------*/
+    $('.newsList--slider').slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 870,
+                settings: {
+                    slidesToShow: 2,
+                    autoplay: true
+                }
+            },
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay: true
+                }
+            }
+        ]
     });
 
 

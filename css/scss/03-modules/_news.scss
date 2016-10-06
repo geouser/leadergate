@@ -12,6 +12,17 @@
         -webkit-justify-content: center;
                 justify-content: center;
     }
+
+    
+
+    &--slider {
+        display: block;
+        margin-bottom: 0;
+
+        .slick-track {
+            padding-top: 20px;
+        }
+    }
 }
 .newsItem {
     width: 307px;

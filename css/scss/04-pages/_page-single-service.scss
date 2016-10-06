@@ -8,21 +8,46 @@
     .sidebar {
         width: 240px;
         padding-left: 20px;
+
+        @media ($phones) {
+            width: 100%;
+            padding-left: 0;
+            padding-top: 100px;
+        }
     }
 
     .article {
         width: -webkit-calc(100% - 240px);
         width: calc(100% - 240px);
         padding-right: 20px;
+
+        @media ($phones) {
+            width: 100%;
+            padding-right: 0;
+        }
     }
 }
 
 .sidebar {
     text-align: right;
 
+    @media ($phones) {  
+        ul {
+            @include flex($alignI: center, $justify: flex-start);
+            width: 100%;
+        }
+    }
+
     .menu-item {
         list-style: none;
         padding-left: 40px;
+
+        @media ($phones) {
+            width: 50%;
+            text-align: left;
+            padding-left: 0;
+            padding-right: 20px;
+        }
 
         &:not(:last-child) {
             margin-bottom: 15px;
@@ -36,6 +61,10 @@
             -webkit-transition: color 0.3s ease;
             -o-transition: color 0.3s ease;
             transition: color 0.3s ease;
+
+            @media (max-width: 400px) {
+                font-size: 14px;
+            }
 
             &:hover {
                 color: #007AE4;
@@ -63,12 +92,20 @@
     transform: translateY(-50%);
     text-align: left;
 
+    @media ($tablets) {
+        left: 10px;
+    }
+
     span[property=itemListElement] {
         display: inline-block;
         vertical-align: middle;
         color: $text;
         font-family: $ul;
         font-size: 16px;
+
+        @media ($tablets) {
+            font-size: 14px;
+        }
 
         &:not(:last-child):after {
             content: '\2192';

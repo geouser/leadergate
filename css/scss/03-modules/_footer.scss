@@ -17,6 +17,18 @@
     color: #fff;
     text-align: left;
     font-size: 16px;
+
+    @media ($tablets) {
+        width: 100%;
+        padding: 50px;
+        text-align: center;
+        font-size: 18px;
+        border-right: 0;
+    }
+
+    @media ($phones) {
+        font-size: 14px;
+    }
 }
 
 .footer--light {
@@ -31,6 +43,12 @@
     width: calc(100% - 270px);
     padding-left: 50px;
 
+    @media ($tablets) {
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 50px;
+    }
+
     ul {
         margin: 0;
         @include flex($alignI: center, $justify: flex-start);
@@ -40,6 +58,14 @@
         width: 33.3333%;
         list-style: none;
         margin: 17px 0;
+
+        @media ($phones) {
+            width: 50%;
+            text-align: left!important;
+            padding-left: 15px!important;
+            padding-right: 15px!important;
+            margin: 10px 0;
+        }
 
         &:nth-child(3n-2) {
             text-align: left;
@@ -59,6 +85,10 @@
             font-size: 16px;
             font-family: $um;
             text-transform: uppercase;
+
+            @media (max-width: 400px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -78,6 +108,20 @@
     color: #fff;
     font-size: 18px;
     font-family: $ur;
+
+    @media ($tablets) {
+        font-size: 16px;
+    }
+
+    @media ($phones) {
+        .flex {
+            display: block;
+        }
+
+        .copyright {
+            margin: 15px 0;
+        }
+    }
 
     .studio__link {
         color: #fff;

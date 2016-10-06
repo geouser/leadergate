@@ -48,6 +48,14 @@
                 height: 5px;
                 background-color: #007AE4;
             }
+
+            @media ($phones) {
+                padding-left: 40px;
+
+                &:before {
+                    width: 30px;
+                }
+            }
         }
     }
 
@@ -55,6 +63,10 @@
     &__content {
         padding-left: 80px;
         padding-bottom: 90px;
+
+        @media ($phones) {
+            padding-left: 40px;
+        }
 
         .article ul {
             margin-top: 20px;
